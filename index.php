@@ -6,10 +6,13 @@
   <title></title>
   <style media="screen">
 body {
-background-color:#F44336;
+background-color:#03A9F4;
 }
   input {
     display: block;
+  }
+  button{
+    margin-top:10px;
   }
   </style>
 </head>
@@ -34,39 +37,6 @@ background-color:#F44336;
       <button  type="submit" >Connexion</button>
   </fieldset>
     </form>
-  <script type="text/javascript">
-  // function inscription () {
-  //   var log =document.getElementById("log").value;
-  //   var pwd =document.getElementById("pwd").value;
-  //   console.log(log + pwd);
-  //   var requete =new XMLHttpRequest();
-  //   requete.onload=ajax;
-  //   requete.open("get","inscription.php?login="+log+"&password="+pwd,true);
-  //   requete.send();
-  //   function ajax (){
-  //     var tableau =this.responseText;
-  //     console.log(tableau);
-  //     var rep = document.createElement('p');
-  //     document.body.appendChild(rep);
-  //     rep.innerHTML="inscription validée :"+tableau ;
-  //     }
-  //   }
-  //   function connexion() {
-  //     var log =document.getElementById("login").value;
-  //     var pwd =document.getElementById("password").value;
-  //     console.log(log + pwd);
-  //     var requete =new XMLHttpRequest();
-  //     requete.onload=ajax;
-  //     requete.open("get","connexion.php?login="+log+"&password="+pwd,true);
-  //     requete.send();
-  //     function ajax (){
-  //       var tableau =this.responseText;
-  //       console.log(tableau);
-  //       var rep = document.createElement('p');
-  //       document.body.appendChild(rep);
-  //       rep.innerHTML="connexion validée :"+tableau ;
-  //       }
-  //     }
-    </script>
+
   </body>
   </html>

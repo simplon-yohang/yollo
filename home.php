@@ -6,27 +6,39 @@
   </head>
   <style media="screen">
   body {
-    background-color:#F44336;
+    background-color:#03A9F4;
   }
-  div  input {
-  display: block;
-  border:none;
-  background-color:#FFC107;
-  }
-  #btn {
-    font-size: 20px;
-  background-color:#FFC107;
-  width: 300px  ;
-  margin:20px;
-  border:1px solid black;
-  border-radius:4px;
+form {
+  margin:20px 0;
+}
+form button {
   margin:5px;
-  }
-
+  border-radius:4px;
+  border:1px solid black;
+  background-color:white;
+}
   form input {
   display: block;
 
   }
+
+  div  input {
+    display: block;
+    border:none;
+    background-color:#FFC107;
+  }
+  .btn {
+    font-size: 20px;
+    background-color:#FFC107;
+    width: 300px  ;
+    margin:20px;
+    border:1px solid black;
+    border-radius:3px;
+    margin:5px;
+  }
+.btn:hover {
+  background-color:lightgrey;
+}
 
   </style>
   <?php
@@ -34,12 +46,9 @@
   ?>
   <body>
     <form id="formulaire" action="insertionProjet.php" method="get" >
-      <fieldset>
-        <legend>Ajouter projet</legend>
-        <label >projet: </label>
+        <label >Projet: </label>
         <input  name="projet"></input>
         <button  type="submit" >Ajouter</button>
-      </fieldset>
     </form>
     <?php
     $projet;
@@ -51,7 +60,7 @@
        catch (Exception $e){
          die ('erreur : '.$e->getMessage());
        }
-       $requeteAffiche = "SELECT DISTINCT projet FROM todo WHERE login='$login' ";
+       $requeteAffiche = "SELECT  projet FROM pr WHERE login='$login' ";
        $resultats = $connexion->query($requeteAffiche);
        $verifTache=$resultats->execute();
        while( $projet = $resultats->fetch() ){
@@ -62,7 +71,7 @@
            ?>
             <div>
             <form action="http://localhost/yollo/todoList.php" method="get" >
-             <button id="btn"  name="projet" value=<?php echo $projet["projet"]?>><?php echo $projet["projet"]?></button>
+             <button class="btn"  name="projet" value=<?php echo $projet["projet"]?>><?php echo $projet["projet"]?></button>
            </form>
          </div>
    <?php

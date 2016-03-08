@@ -10,7 +10,7 @@
     catch (Exception $e){
       die('Erreur : '.$e->getMessage());
     }
-    $insertion = "INSERT INTO todo (`idTache`,`login`,`projet`) VALUES (NULL,'$login','$projet')";
+    $insertion = "INSERT INTO pr (`idProjet`,`projet`,`login`) VALUES (NULL,'$projet','$login')";
     echo $insertion;
     $requete = $connect->query($insertion);
     $requete ->closeCursor();

@@ -3,17 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <?php
+    $projet=$_GET["projet"];
+    include "header.php";
+    ?>
 <style media="screen">
 body {
-  background-color:#F44336;
+  background-color:#03A9F4;
 }
 div  input {
 display: block;
 border:none;
-  background-color:#FFC107;
+background-color:#FFC107;
 }
 input ,button {
-display: inline-block;;
+display: inline-block;
 }
 .tache {
 background-color:#FFC107;
@@ -22,7 +26,6 @@ margin:20px;
 border:1px solid black;
 border-radius:4px;
 }
-
 form input {
 display: block;
 
@@ -30,21 +33,19 @@ display: block;
 button {
   margin:5px;
   border-radius:4px;
+  border:1px solid black;
+  background-color:white;
 }
 
 </style>
-<?php
-$projet=$_GET["projet"];
-include "header.php";
-?>
   </head>
   <body  >
     <form id="formulaire" action="ajouteTache.php" method="get" >
       <fieldset>
-          <legend>Ajouter tache</legend>
-          <label >titre: </label>
+          <legend>Ajouter de tache </legend>
+          <label >Titre: </label>
           <input id="titre" name="titre"></input>
-          <label >taches: </label>
+          <label >Taches: </label>
           <input  id="password" name="tache"></input>
           <input  type="hidden" name="projet" value=<?php echo $projet; ?>></input>
           <button  type="submit" >Connexion</button>

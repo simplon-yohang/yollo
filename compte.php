@@ -6,7 +6,7 @@
     <title></title>
     <style>
     body {
-      background-color:#F44336;
+      background-color:#03A9F4;
     }
     div  input {
     display: block;
