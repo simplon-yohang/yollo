@@ -37,6 +37,24 @@ background-color:#03A9F4;
       <button  type="submit" >Connexion</button>
   </fieldset>
     </form>
+<!-- <script type="text/javascript">
+  function inscription () {
+    var log =document.getElementById("log").value;
+    var pwd =document.getElementById("pwd").value;
+    console.log(log + pwd);
+    var requete =new XMLHttpRequest();
+    requete.onload=ajax;
+    requete.open("get","inscription.php?login="+log+"&password="+pwd,true);
+    requete.send();
+    function ajax (){
+      var tableau =this.responseText;
+      console.log(tableau);
+      var rep = document.createElement('p');
+      document.body.appendChild(rep);
+      rep.innerHTML="inscription validée :"+tableau ;
+      }
+    }
 
+</script> -->
   </body>
   </html>

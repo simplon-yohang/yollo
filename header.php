@@ -93,7 +93,7 @@ session_start();
 </div>
 <script type="text/javascript">
 var div;
-var liste
+var liste;
 function avant(ev) {
 var cible =ev.target.id;
 liste=document.getElementById(cible);

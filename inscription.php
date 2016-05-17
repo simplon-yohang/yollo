@@ -1,7 +1,7 @@
 
 <?php
-$login = $_GET['login'];
-$password = $_GET['password'];
+$login = $_GET['log'];
+$password = $_GET['pwd'];
 
 try
 {
@@ -16,4 +16,5 @@ $requete->bindParam(':login', $login, PDO::PARAM_STR);
 $requete->bindParam(':password', $password, PDO::PARAM_STR);
 $result = $requete->execute(); // renvoie TRUE || FALSE
 echo $login.$password ;
+header("Location:http://localhost/yollo/index.php");
 ?>

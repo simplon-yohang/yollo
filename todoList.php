@@ -71,12 +71,12 @@ button {
     else {
               echo '<div class="tache" id='.$verifTache["idTache"].'  ondrop="drop(event)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)">'
                ?>
-            <form >
-                  <p><?php echo $verifTache["idTache"]?></p>
-                  <input value=<?php echo $verifTache["titre"]?> >
+            <form action="modifierTache.php"  method="get">
+                  <p><input name="idTache" value=<?php echo $verifTache["idTache"]?>></p></input>
+                  <input name="tache" value=<?php echo $verifTache["titre"]?> >
                   <input value=<?php echo $verifTache["tache"];?> >
                   <p><?php echo $verifTache["dateCreation"];?> </p>
-                  <button onclick="">Modifier</button>
+                  <button onclick="submit">Modifier</button>
                   <button onclick="">Supprimer la tache</button>
                </form>
              </div>

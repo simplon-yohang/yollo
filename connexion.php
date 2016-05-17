@@ -59,7 +59,7 @@ while( $user = $resultats->fetch() ){
 else {
   echo "vous êtes déja connectez";
   echo "<br/>";
-  // header("Location:http://localhost/yollo/index.php");
+  header("Location:http://localhost/yollo/home.php");
 }
 ?>
 
